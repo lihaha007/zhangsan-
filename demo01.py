@@ -13,5 +13,10 @@ print({})   #字典
 汗滴禾下土
 """
 
+# a = input("请输入：")
+# print("input获取的内容：",a)
+
+
 a = input("请输入：")
-print("input获取的内容：",a)
+b = input("请输入：")
+print("两段字符串的长度：",len(a)+len(b))
