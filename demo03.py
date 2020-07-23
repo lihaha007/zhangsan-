@@ -54,4 +54,24 @@ except:
 
 
 #包
-import pymysql
+# import pymysql
+
+"""
+定义一个方法，用来判断用户输入的账号密码是否符合规定
+"""
+def check(username,password):
+    """
+    账号长度5-8，密码6-12位，账号小写开头。
+    """
+    if len(username) >= 5 and len(username) <= 8:
+        if username[0] in "qwertyuiopasdfghjklzxcvbnm":
+            if len(password) >= 6 and len(password) <= 12:
+                return True
+            else:
+                return "密码不符合"
+        else:
+            return "首字母必须小写开头"
+    else:
+        return "账号不合格，5-8位"
+
+check("vdxbtbx","szdvdfb")
